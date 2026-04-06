@@ -37,9 +37,11 @@ export function Header() {
       <nav className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <span className="font-heading text-xl font-bold">
-            <span className="text-gradient">DevWolf</span>
-          </span>
+          <img
+            src="/images/logo-wide.png"
+            alt="DevWolf Soluciones IT"
+            className="h-8 w-auto"
+          />
         </a>
 
         {/* Desktop Navigation */}

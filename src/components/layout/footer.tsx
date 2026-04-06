@@ -31,10 +31,11 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <span className="font-heading text-xl font-bold">
-              <span className="text-gradient">DevWolf</span>
-              <span className="text-foreground"> Soluciones IT</span>
-            </span>
+            <img
+              src="/images/logo-wide.png"
+              alt="DevWolf Soluciones IT"
+              className="h-10 w-auto"
+            />
             <p className="text-sm text-muted-foreground">
               Transformamos empresas con tecnología de vanguardia para la Industria 4.0.
             </p>

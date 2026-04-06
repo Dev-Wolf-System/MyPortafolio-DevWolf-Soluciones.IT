@@ -6,13 +6,16 @@ import { Button } from '@/components/ui/button'
 export function HeroSection() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-secondary/10" />
+      {/* Background gradient con colores DevWolf */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-background to-background" />
 
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-radial from-primary/10 to-transparent animate-pulse" />
-        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-radial from-secondary/10 to-transparent animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-radial from-primary/20 to-transparent animate-pulse" />
+        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-radial from-secondary/15 to-transparent animate-pulse" style={{ animationDelay: '1s' }} />
+        {/* Línea decorativa roja */}
+        <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
+        <div className="absolute bottom-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       </div>
 
       {/* Content */}
@@ -21,10 +24,15 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          className="flex flex-col items-center"
         >
-          <h1 className="font-heading text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
-            <span className="text-gradient">DevWolf</span>
-            <br />
+          {/* Logo de la empresa */}
+          <img
+            src="/images/logo-wide.png"
+            alt="DevWolf Soluciones IT"
+            className="h-20 md:h-24 lg:h-32 w-auto mb-4"
+          />
+          <h1 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             <span className="text-foreground">Soluciones IT</span>
           </h1>
         </motion.div>

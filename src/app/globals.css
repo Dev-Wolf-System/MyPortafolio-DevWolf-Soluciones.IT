@@ -4,25 +4,34 @@
 
 @layer base {
   :root {
-    --background: 0 0% 3.9%;
+    /* Paleta DevWolf Soluciones IT */
+    --background: 0 0% 4%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 6%;
+    --card: 0 0% 7%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 6%;
+    --popover: 0 0% 7%;
     --popover-foreground: 0 0% 98%;
-    --primary: 217 91% 60%;
+
+    /* Azul corporativo DevWolf #004aad */
+    --primary: 214 100% 34%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 270 70% 50%;
+
+    /* Rojo DevWolf #ff0000 - para acentos y CTAs */
+    --secondary: 0 100% 50%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 160 84% 39%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    /* Azul claro para elementos secundarios */
+    --accent: 214 100% 50%;
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 62.8% 30.6%;
+
+    --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 217 91% 60%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 214 100% 34%;
     --radius: 0.75rem;
   }
 
@@ -60,7 +69,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-secondary;
   }
 
   .bg-gradient-radial {
