@@ -10,8 +10,9 @@
 
 ### 1. Clonar el repositorio
 ```bash
-git clone <repo-url> /opt/devwolf-portfolio
-cd /opt/devwolf-portfolio
+git clone https://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@github.com/Dev-Wolf-System/MiPortafolio-DevWolf-Soluciones.IT.git
+
+cd devwolf-portfolio
 ```
 
 ### 2. Crear archivo .env
