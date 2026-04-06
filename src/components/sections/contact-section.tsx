@@ -6,8 +6,12 @@ import { Linkedin, Mail, Send } from 'lucide-react'
 
 export function ContactSection() {
   return (
-    <section id="contacto" className="py-24">
-      <div className="container">
+    <section id="contacto" className="relative py-24 overflow-hidden">
+      {/* Fondo decorativo */}
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
+
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +27,8 @@ export function ContactSection() {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
+            {/* Botón CTA principal con color secundario (rojo DevWolf) */}
+            <Button variant="secondary" size="lg" asChild className="hover:shadow-lg hover:shadow-secondary/25">
               <a
                 href="https://www.linkedin.com/in/nahuel-carlos-agustin-lobo-398230151"
                 target="_blank"
@@ -48,7 +53,7 @@ export function ContactSection() {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, type: 'spring' }}
-            className="mt-16 inline-flex items-center justify-center rounded-full bg-primary/10 p-6"
+            className="mt-16 inline-flex items-center justify-center rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 p-6"
           >
             <Send className="h-12 w-12 text-primary" />
           </motion.div>

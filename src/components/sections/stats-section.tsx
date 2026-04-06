@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion'
 
 const stats = [
-  { value: '99.9%', label: 'Uptime garantizado' },
-  { value: '0', label: 'Pérdidas de datos' },
-  { value: '100%', label: 'Proyectos completados' },
-  { value: '24/7', label: 'Soporte técnico' },
+  { value: '99.9%', label: 'Uptime garantizado', color: 'text-primary' },
+  { value: '0', label: 'Pérdidas de datos', color: 'text-secondary' },
+  { value: '100%', label: 'Proyectos completados', color: 'text-primary' },
+  { value: '24/7', label: 'Soporte técnico', color: 'text-secondary' },
 ]
 
 const containerVariants = {
@@ -30,8 +30,11 @@ const itemVariants = {
 
 export function StatsSection() {
   return (
-    <section className="bg-muted/30 py-24">
-      <div className="container">
+    <section className="relative py-24 overflow-hidden">
+      {/* Fondo con gradiente DevWolf */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-background to-secondary/5" />
+
+      <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +62,7 @@ export function StatsSection() {
               variants={itemVariants}
               className="text-center"
             >
-              <div className="font-heading text-4xl font-bold text-primary sm:text-5xl lg:text-6xl">
+              <div className={`font-heading text-4xl font-bold sm:text-5xl lg:text-6xl ${stat.color}`}>
                 {stat.value}
               </div>
               <p className="mt-2 text-muted-foreground">{stat.label}</p>

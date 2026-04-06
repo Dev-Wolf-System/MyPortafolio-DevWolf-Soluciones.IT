@@ -12,8 +12,13 @@ const values = [
 
 export function AboutSection() {
   return (
-    <section id="nosotros" className="py-24 bg-muted/30">
-      <div className="container">
+    <section id="nosotros" className="relative py-24 overflow-hidden">
+      {/* Fondo decorativo */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
+      <div className="absolute top-1/2 left-0 w-1/2 h-px bg-gradient-to-r from-primary/20 to-transparent" />
+      <div className="absolute top-1/2 right-0 w-1/2 h-px bg-gradient-to-l from-secondary/20 to-transparent" />
+
+      <div className="container relative z-10">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Content */}
           <motion.div
