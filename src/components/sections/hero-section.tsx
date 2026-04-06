@@ -43,9 +43,9 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto md:text-xl"
         >
-          Transformamos empresas con tecnología de vanguardia.
+          Impulsamos la transformación empresarial mediante tecnología de vanguardia, convirtiendo la innovación en resultados concretos, medibles y sostenibles.
           <br />
-          Automatización, IA, Desarrollo e Industria 4.0.
+          Especialistas en Automatización, Inteligencia Artificial, Desarrollo de Software e Industria 4.0.
         </motion.p>
 
         <motion.div

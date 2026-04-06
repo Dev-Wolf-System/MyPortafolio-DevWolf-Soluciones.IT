@@ -22,6 +22,8 @@ const services = [
   'Domótica e IoT',
   'Infraestructura IT/OT',
   'SaaS y Microservicios',
+  'Soporte tecnico especializado',
+  'Consultorias personalizadas'
 ]
 
 export function Footer() {
@@ -37,7 +39,9 @@ export function Footer() {
               className="h-10 w-auto"
             />
             <p className="text-sm text-muted-foreground">
-              Transformamos empresas con tecnología de vanguardia para la Industria 4.0.
+              Impulsamos la transformación de su empresa mediante soluciones tecnológicas de vanguardia, acompañándolo estratégicamente en cada etapa del camino hacia la Industria 4.0.
+
+              Integramos innovación, automatización e inteligencia de datos para optimizar procesos, aumentar la eficiencia operativa y potenciar su competitividad en un entorno cada vez más digital. 🚀.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((link) => (
@@ -98,7 +102,7 @@ export function Footer() {
                   href="mailto:contacto@devwolf.com.ar"
                   className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  contacto@devwolf.com.ar
+                  devwolf.contacto@gmail.com
                 </a>
               </li>
             </ul>

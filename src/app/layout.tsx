@@ -16,13 +16,13 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: 'DevWolf Soluciones IT | Transformación Digital e Industria 4.0',
-  description: 'Empresa especializada en transformación digital, automatización con IA, desarrollo de software, domótica, infraestructura IT/OT y soluciones SaaS. Implementación de tecnologías para Industria 4.0.',
-  keywords: ['transformación digital', 'industria 4.0', 'automatización', 'IA', 'desarrollo de software', 'SCADA', 'IoT', 'DevWolf'],
+  description: 'Empresa especializada en transformación digital, automatización con IA, desarrollo de software, domótica, infraestructura IT/OT, soluciones SaaS y Soporte tecnico especializado. Implementación de tecnologías para Industria 4.0.',
+  keywords: ['transformación digital', 'industria 4.0', 'automatización', 'IA', 'desarrollo de software', 'SCADA', 'IoT', 'DevWolf', 'soporte'],
   authors: [{ name: 'DevWolf Soluciones IT' }],
-  openGraph: {
+  openGraph: {  
     title: 'DevWolf Soluciones IT | Transformación Digital e Industria 4.0',
     description: 'Empresa especializada en transformación digital, automatización con IA, desarrollo de software, domótica, infraestructura IT/OT y soluciones SaaS.',
-    url: 'https://devwolf.com.ar',
+    url: 'https://devwolf.srv878399.hstgr.cloud/',
     siteName: 'DevWolf Soluciones IT',
     type: 'website',
     locale: 'es_AR',

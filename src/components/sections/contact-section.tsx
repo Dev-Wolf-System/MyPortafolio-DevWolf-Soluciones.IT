@@ -23,7 +23,7 @@ export function ContactSection() {
             ¿Listo para transformar tu empresa?
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Contáctanos y descubre cómo podemos ayudarte a implementar las tecnologías de la Industria 4.0
+            Contáctanos y descubre cómo podemos ayudarte a implementar estas tecnologías y avanzar por el camino de la Trasformacion Digital y la Industria 4.0.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
@@ -40,7 +40,7 @@ export function ContactSection() {
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="mailto:contacto@devwolf.com.ar" className="inline-flex items-center gap-2">
+              <a href="mailto:devwolf.contacto@gmail.com" className="inline-flex items-center gap-2">
                 <Mail className="h-5 w-5" />
                 Email
               </a>

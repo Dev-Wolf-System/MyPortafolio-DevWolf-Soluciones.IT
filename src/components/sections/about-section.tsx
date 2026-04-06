@@ -32,11 +32,13 @@ export function AboutSection() {
             </h2>
 
             <p className="mt-6 text-muted-foreground">
-              <strong className="text-foreground">DevWolf Soluciones IT</strong> es una empresa especializada en transformación digital e implementación de tecnologías para la Industria 4.0, con sede en Argentina.
+              <strong className="text-foreground">DevWolf Soluciones IT</strong> es una empresa especializada en transformación digital e implementación de tecnologías para la Industria 4.0.
             </p>
 
             <p className="mt-4 text-muted-foreground">
-              Nuestra misión es impulsar la evolución digital de las empresas mediante soluciones tecnológicas integrales que optimizan procesos, aumentan la eficiencia operativa y generan valor medible en cada implementación.
+              Nuestra misión es liderar la evolución digital de las empresas mediante soluciones tecnológicas integrales, diseñadas para optimizar procesos, maximizar la eficiencia operativa y generar valor tangible en cada implementación.
+
+              Acompañamos a nuestros clientes con una visión estratégica, combinando innovación, automatización e inteligencia de datos para transformar desafíos en oportunidades y resultados concretos.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -58,7 +60,7 @@ export function AboutSection() {
             className="relative"
           >
             <div className="rounded-xl border border-border bg-card p-8">
-              <h3 className="font-heading text-xl font-semibold">Proof de Empresa</h3>
+              <h3 className="font-heading text-xl font-semibold">Prueba de Excelencia Operativa</h3>
 
               <div className="mt-6 space-y-4">
                 <div className="flex justify-between items-center py-2 border-b border-border">
@@ -70,15 +72,27 @@ export function AboutSection() {
                   <span className="font-bold text-primary">100%</span>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-border">
-                  <span className="text-muted-foreground">Proyectos SCADA</span>
-                  <span className="font-bold text-primary">Plant-wide</span>
+                  <span className="text-muted-foreground">Implementaciones SCADA</span>
+                  <span className="font-bold text-primary">Cobertura Plant-wide</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
-                  <span className="text-muted-foreground">Caídas Críticas</span>
-                  <span className="font-bold text-primary">0</span>
+                  <span className="text-muted-foreground">Incidentes Críticos</span>
+                  <span className="font-bold text-primary">0 interrupciones</span>
+                </div>
+               <div className="flex justify-between items-center py-2">
+                  <span className="text-muted-foreground">Automatización de Procesos</span>
+                  <span className="font-bold text-primary">+75%</span>
+                </div>
+               <div className="flex justify-between items-center py-2">
+                  <span className="text-muted-foreground">Monitoreo en Tiempo Real</span>
+                  <span className="font-bold text-primary">+75%</span>
+                </div>
+               <div className="flex justify-between items-center py-2">
+                  <span className="text-muted-foreground">Integración OT/IT</span>
+                  <span className="font-bold text-primary">100% interoperable</span>
                 </div>
               </div>
-            </div>
+            </div>  
 
             {/* Decorative gradient */}
             <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur-xl -z-10" />

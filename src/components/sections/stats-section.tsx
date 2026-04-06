@@ -1,13 +1,15 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import CountUp from 'react-countup'
 
 const stats = [
-  { value: '99.9%', label: 'Uptime garantizado', color: 'text-primary' },
-  { value: '0', label: 'Pérdidas de datos', color: 'text-secondary' },
-  { value: '100%', label: 'Proyectos completados', color: 'text-primary' },
-  { value: '24/7', label: 'Soporte técnico', color: 'text-secondary' },
+  { value: '99.9', suffix: '%', label: 'Disponibilidad de Sistemas' },
+  { value: '100', suffix: '%', label: 'Integridad de Datos' },
+  { value: '0', suffix: '', label: 'Incidentes Críticos' },
+  { value: '24', suffix: '/7', label: 'Monitoreo Continuo' },
 ]
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -30,42 +32,68 @@ const itemVariants = {
 
 export function StatsSection() {
   return (
-    <section className="relative py-24 overflow-hidden">
-      {/* Fondo con gradiente DevWolf */}
+    <section className="relative py-32 overflow-hidden">
+      {/* Fondo avanzado */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-background to-secondary/5" />
+      <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-primary/10 blur-3xl opacity-30" />
 
       <div className="container relative z-10">
+        {/* HEADER */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.7 }}
+          className="text-center"
         >
-          <h2 className="text-center font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Resultados Comprobados
+          <span className="text-sm uppercase tracking-widest text-primary font-medium">
+            Performance & Reliability
+          </span>
+
+          <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            Resultados que Hablan por Sí Solos
           </h2>
-          <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
-            Métricas que demuestran nuestro compromiso con la excelencia
+
+          <p className="mt-5 text-muted-foreground max-w-2xl mx-auto text-lg">
+            Indicadores clave que reflejan la calidad, confiabilidad y el impacto
+            real de nuestras soluciones en entornos industriales y empresariales.
           </p>
         </motion.div>
 
+        {/* STATS */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4"
+          className="mt-24 grid gap-10 sm:grid-cols-2 lg:grid-cols-4"
         >
           {stats.map((stat, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="text-center"
+              className="group relative rounded-3xl border border-border bg-card/60 backdrop-blur-xl p-10 text-center transition-all duration-500 hover:-translate-y-3 hover:border-primary hover:shadow-2xl hover:shadow-primary/20"
             >
-              <div className={`font-heading text-4xl font-bold sm:text-5xl lg:text-6xl ${stat.color}`}>
-                {stat.value}
+              {/* Glow dinámico */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 rounded-3xl" />
+
+              {/* Valor con animación */}
+              <div className="relative font-heading text-5xl font-bold sm:text-6xl lg:text-7xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <CountUp
+                  end={parseFloat(stat.value)}
+                  duration={2.5}
+                  decimals={stat.value.includes('.') ? 1 : 0}
+                />
+                {stat.suffix}
               </div>
-              <p className="mt-2 text-muted-foreground">{stat.label}</p>
+
+              {/* Label */}
+              <p className="mt-4 text-sm text-muted-foreground tracking-wide uppercase">
+                {stat.label}
+              </p>
+
+              {/* Divider animado */}
+              <div className="mt-5 h-[2px] w-12 mx-auto bg-gradient-to-r from-primary to-secondary opacity-50 group-hover:w-20 transition-all duration-300" />
             </motion.div>
           ))}
         </motion.div>
