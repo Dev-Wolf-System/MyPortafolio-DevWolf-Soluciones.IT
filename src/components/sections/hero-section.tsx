@@ -6,60 +6,99 @@ import { Button } from '@/components/ui/button'
 export function HeroSection() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-      {/* Background gradient con colores DevWolf */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-background to-background" />
 
-      {/* Animated background elements */}
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-background" />
+
+      {/* Glow effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-radial from-primary/20 to-transparent animate-pulse" />
-        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-radial from-secondary/15 to-transparent animate-pulse" style={{ animationDelay: '1s' }} />
-        {/* Línea decorativa roja */}
-        <div className="absolute top-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
-        <div className="absolute bottom-1/4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-radial from-primary/20 to-transparent blur-3xl" />
+        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-radial from-secondary/20 to-transparent blur-3xl" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container text-center">
+      <div className="relative z-10 container max-w-6xl mx-auto text-center px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           className="flex flex-col items-center"
         >
-          {/* Logo de la empresa */}
+
+          {/* Badge */}
+          <span className="mb-6 inline-block rounded-full border border-primary/30 px-4 py-1 text-sm text-primary">
+            Automatización · IA · Sistemas a medida
+          </span>
+
+          {/* Logo */}
           <img
             src="/images/logo-wide.png"
             alt="DevWolf Soluciones IT"
-            className="h-20 md:h-24 lg:h-32 w-auto mb-4"
+            className="h-20 md:h-24 lg:h-28 w-auto mb-6"
           />
-          <h1 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            <span className="text-foreground">Soluciones IT</span>
+
+          {/* HEADLINE (🔥 clave total) */}
+          <h1 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-6xl leading-tight max-w-4xl">
+            <span className="text-foreground">
+              Reducí costos operativos y automatizá tu empresa
+            </span>
+            <br />
+            <span className="text-primary">
+              con IA y sistemas diseñados a medida
+            </span>
           </h1>
-        </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto md:text-xl"
-        >
-          Impulsamos la transformación empresarial mediante tecnología de vanguardia, convirtiendo la innovación en resultados concretos, medibles y sostenibles.
-          <br />
-          Especialistas en Automatización, Inteligencia Artificial, Desarrollo de Software e Industria 4.0.
-        </motion.p>
+          {/* SUBHEAD (más concreto) */}
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto md:text-xl">
+            Implemento automatización, inteligencia artificial y software
+            personalizado para empresas que buscan escalar sin aumentar estructura.
+          </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
-        >
-          <Button size="lg" asChild>
-            <a href="#servicios">Nuestros Servicios</a>
-          </Button>
-          <Button variant="outline" size="lg" asChild>
-            <a href="#contacto">Contáctanos</a>
-          </Button>
+          {/* PROOF / STACK */}
+          <div className="mt-6 flex flex-col items-center gap-2 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <span className="text-primary">✔</span>
+              <span>Automatización con n8n + IA + agentes inteligentes</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-primary">✔</span>
+              <span>Sistemas a medida (React, Node.js, PostgreSQL)</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-primary">✔</span>
+              <span>Integraciones con WhatsApp, APIs y entornos industriales</span>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="text-base px-8 py-6 shadow-lg hover:shadow-primary/30"
+              asChild
+            >
+              <a href="#contacto">
+                🚀 Agendar diagnóstico gratuito
+              </a>
+            </Button>
+
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-base px-8 py-6"
+              asChild
+            >
+              <a href="#proyectos">
+                Ver casos reales
+              </a>
+            </Button>
+          </div>
+
+          {/* MICRO TRUST */}
+          <p className="mt-6 text-xs text-muted-foreground">
+            Enfoque en resultados medibles • Sin soluciones genéricas
+          </p>
+
         </motion.div>
       </div>
 

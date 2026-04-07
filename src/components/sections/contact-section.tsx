@@ -2,33 +2,65 @@
 
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
-import { Linkedin, Mail, Send } from 'lucide-react'
+import { Linkedin, Send } from 'lucide-react'
 
 export function ContactSection() {
   return (
-    <section id="contacto" className="relative py-24 overflow-hidden">
-      {/* Fondo decorativo */}
-      <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
+    <section id="contacto" className="relative py-28 overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
+      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-primary/10 blur-3xl rounded-full" />
 
-      <div className="container relative z-10">
+      <div className="container relative z-10 max-w-4xl mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-2xl text-center"
+          transition={{ duration: 0.7 }}
+          className="text-center"
         >
-          <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            ¿Listo para transformar tu empresa?
+          {/* BADGE */}
+          <div className="inline-block mb-4 px-4 py-1 rounded-full border border-primary/20 text-sm text-primary bg-primary/5 backdrop-blur">
+            Consultoría & Automatización IA
+          </div>
+
+          {/* HEADLINE */}
+          <h2 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl leading-tight">
+            Automatizá tu empresa y
+            <span className="text-primary"> escalá sin aumentar costos</span>
           </h2>
-          <p className="mt-4 text-muted-foreground">
-            Contáctanos y descubre cómo podemos ayudarte a implementar estas tecnologías y avanzar por el camino de la Trasformacion Digital y la Industria 4.0.
+
+          {/* SUBTEXT */}
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Diseñamos e implementamos soluciones tecnológicas que optimizan procesos,
+            reducen costos operativos y aumentan la eficiencia real del negocio.
           </p>
 
+          {/* BENEFITS */}
+          <div className="mt-6 flex flex-col items-center gap-2 text-sm text-muted-foreground">
+            <span>✔ Diagnóstico estratégico sin costo</span>
+            <span>✔ Soluciones personalizadas (no genéricas)</span>
+            <span>✔ Impacto medible en operaciones</span>
+          </div>
+
+          {/* CTA */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            {/* Botón CTA principal con color secundario (rojo DevWolf) */}
-            <Button variant="secondary" size="lg" asChild className="hover:shadow-lg hover:shadow-secondary/25">
+            <Button
+              size="lg"
+              className="text-base px-8 py-6 bg-primary text-white shadow-xl hover:shadow-primary/30 transition-all"
+              asChild
+            >
+              <a href="mailto:devwolf.contacto@gmail.com">
+                🚀 Agendar diagnóstico gratuito
+              </a>
+            </Button>
+
+            <Button
+              variant="outline"
+              size="lg"
+              className="text-base px-8 py-6 hover:border-primary hover:shadow-md transition-all"
+              asChild
+            >
               <a
                 href="https://www.linkedin.com/in/nahuel-carlos-agustin-lobo-398230151"
                 target="_blank"
@@ -36,27 +68,28 @@ export function ContactSection() {
                 className="inline-flex items-center gap-2"
               >
                 <Linkedin className="h-5 w-5" />
-                LinkedIn
-              </a>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a href="mailto:devwolf.contacto@gmail.com" className="inline-flex items-center gap-2">
-                <Mail className="h-5 w-5" />
-                Email
+                Ver perfil profesional
               </a>
             </Button>
           </div>
 
-          {/* Decorative element */}
+          {/* ICON VISUAL */}
           <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
+            initial={{ scale: 0, rotate: -10 }}
+            whileInView={{ scale: 1, rotate: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.2, type: 'spring' }}
-            className="mt-16 inline-flex items-center justify-center rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 p-6"
+            transition={{ delay: 0.3, type: 'spring', stiffness: 120 }}
+            className="mt-16 flex justify-center"
           >
-            <Send className="h-12 w-12 text-primary" />
+            <div className="p-6 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-xl border border-white/10 shadow-xl">
+              <Send className="h-12 w-12 text-primary" />
+            </div>
           </motion.div>
+
+          {/* TRUST */}
+          <p className="mt-6 text-xs text-muted-foreground">
+            Respuesta en menos de 24hs • Sin compromiso
+          </p>
         </motion.div>
       </div>
     </section>

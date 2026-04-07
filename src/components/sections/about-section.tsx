@@ -4,43 +4,50 @@ import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
 
 const values = [
-  'Experiencia Industrial Real',
-  'Enfoque Integral',
-  'Tecnología de Punta',
-  'Resultados Tangibles',
+  'Experiencia real en entornos industriales',
+  'Automatización orientada a resultados',
+  'Integración IT/OT sin fricción',
+  'Soluciones escalables y medibles',
 ]
 
 export function AboutSection() {
   return (
-    <section id="nosotros" className="relative py-24 overflow-hidden">
-      {/* Fondo decorativo */}
+    <section id="nosotros" className="relative py-28 overflow-hidden">
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
-      <div className="absolute top-1/2 left-0 w-1/2 h-px bg-gradient-to-r from-primary/20 to-transparent" />
-      <div className="absolute top-1/2 right-0 w-1/2 h-px bg-gradient-to-l from-secondary/20 to-transparent" />
 
       <div className="container relative z-10">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-          {/* Content */}
+        <div className="grid gap-16 lg:grid-cols-2 items-center">
+
+          {/* LEFT */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7 }}
           >
-            <h2 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Sobre Nosotros
+            <span className="text-sm uppercase tracking-widest text-primary font-medium">
+              Sobre DevWolf
+            </span>
+
+            <h2 className="mt-3 font-heading text-4xl font-bold tracking-tight sm:text-5xl leading-tight">
+              Ingeniería aplicada a la
+              <span className="text-primary"> transformación real</span>
             </h2>
 
-            <p className="mt-6 text-muted-foreground">
-              <strong className="text-foreground">DevWolf Soluciones IT</strong> es una empresa especializada en transformación digital e implementación de tecnologías para la Industria 4.0.
+            <p className="mt-6 text-muted-foreground text-lg">
+              En <strong className="text-foreground">DevWolf</strong> ayudamos a empresas a
+              automatizar procesos, integrar sistemas y escalar operaciones mediante
+              tecnología, inteligencia artificial y arquitectura industrial moderna.
             </p>
 
             <p className="mt-4 text-muted-foreground">
-              Nuestra misión es liderar la evolución digital de las empresas mediante soluciones tecnológicas integrales, diseñadas para optimizar procesos, maximizar la eficiencia operativa y generar valor tangible en cada implementación.
-
-              Acompañamos a nuestros clientes con una visión estratégica, combinando innovación, automatización e inteligencia de datos para transformar desafíos en oportunidades y resultados concretos.
+              No trabajamos con soluciones genéricas. Diseñamos e implementamos
+              sistemas adaptados a cada entorno, con foco en eficiencia operativa,
+              reducción de costos y toma de decisiones basada en datos.
             </p>
 
+            {/* VALUE POINTS */}
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {values.map((value, index) => (
                 <div key={index} className="flex items-center gap-3">
@@ -51,52 +58,64 @@ export function AboutSection() {
             </div>
           </motion.div>
 
-          {/* Stats Card */}
+          {/* RIGHT CARD */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="rounded-xl border border-border bg-card p-8">
-              <h3 className="font-heading text-xl font-semibold">Prueba de Excelencia Operativa</h3>
+            <div className="rounded-2xl border border-border bg-card/70 backdrop-blur-xl p-8">
 
-              <div className="mt-6 space-y-4">
-                <div className="flex justify-between items-center py-2 border-b border-border">
-                  <span className="text-muted-foreground">Disponibilidad de Sistemas</span>
-                  <span className="font-bold text-primary">99.9%</span>
+              <h3 className="font-heading text-xl font-semibold">
+                Impacto en implementaciones reales
+              </h3>
+
+              <div className="mt-6 space-y-5">
+
+                <div className="flex justify-between items-start">
+                  <span className="text-muted-foreground">
+                    Automatización de procesos operativos
+                  </span>
+                  <span className="font-bold text-primary">+60%</span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-border">
-                  <span className="text-muted-foreground">Integridad de Datos</span>
+
+                <div className="flex justify-between items-start">
+                  <span className="text-muted-foreground">
+                    Reducción de tareas manuales
+                  </span>
+                  <span className="font-bold text-primary">+70%</span>
+                </div>
+
+                <div className="flex justify-between items-start">
+                  <span className="text-muted-foreground">
+                    Integración de sistemas IT / OT
+                  </span>
+                  <span className="font-bold text-primary">End-to-end</span>
+                </div>
+
+                <div className="flex justify-between items-start">
+                  <span className="text-muted-foreground">
+                    Visibilidad en tiempo real
+                  </span>
                   <span className="font-bold text-primary">100%</span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-border">
-                  <span className="text-muted-foreground">Implementaciones SCADA</span>
-                  <span className="font-bold text-primary">Cobertura Plant-wide</span>
-                </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-muted-foreground">Incidentes Críticos</span>
-                  <span className="font-bold text-primary">0 interrupciones</span>
-                </div>
-               <div className="flex justify-between items-center py-2">
-                  <span className="text-muted-foreground">Automatización de Procesos</span>
-                  <span className="font-bold text-primary">+75%</span>
-                </div>
-               <div className="flex justify-between items-center py-2">
-                  <span className="text-muted-foreground">Monitoreo en Tiempo Real</span>
-                  <span className="font-bold text-primary">+75%</span>
-                </div>
-               <div className="flex justify-between items-center py-2">
-                  <span className="text-muted-foreground">Integración OT/IT</span>
-                  <span className="font-bold text-primary">100% interoperable</span>
-                </div>
-              </div>
-            </div>  
 
-            {/* Decorative gradient */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur-xl -z-10" />
+                <div className="flex justify-between items-start">
+                  <span className="text-muted-foreground">
+                    Escalabilidad de soluciones
+                  </span>
+                  <span className="font-bold text-primary">Alta</span>
+                </div>
+
+              </div>
+            </div>
+
+            {/* Glow */}
+            <div className="absolute -inset-6 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-2xl -z-10" />
           </motion.div>
+
         </div>
       </div>
     </section>

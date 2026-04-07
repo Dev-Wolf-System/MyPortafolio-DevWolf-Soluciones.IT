@@ -1,53 +1,64 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Building2, Cpu, Server, Settings, Database, Bot  } from 'lucide-react'
+import { Building2, Cpu, Server, Settings, Database, Bot } from 'lucide-react'
 
 const projects = [
   {
-    title: 'Plataforma SCADA Industrial Plant-wide',
-    client: 'Ingenio La Corona',
-    description: 'Diseño e implementación de plataforma SCADA de misión crítica para supervisión, control y analítica en tiempo real a nivel planta completa. Integración de sistemas IT/OT, asegurando alta disponibilidad, trazabilidad de datos y optimización continua de los procesos productivos.',
-    tags: ['SCADA', 'Alta Disponibilidad', 'Integración IT/OT', 'Tiempo Real', 'Industria 4.0'],
+    title: 'Sistema SCADA de Alta Disponibilidad',
+    client: 'Sector Industrial y Plantas Productoras',
+    description:
+      'Implementación de plataforma SCADA plant-wide con monitoreo y control en tiempo real, integrando sistemas IT/OT para una operación centralizada y altamente eficiente.',
+    result: '↑ +30% eficiencia operativa | ↓ fallas críticas',
+    tags: ['SCADA', 'Alta Disponibilidad', 'IT/OT', 'Tiempo Real'],
     icon: Cpu,
   },
   {
-    title: 'Arquitectura e Infraestructura IT/OT',
-    client: 'Sector Industrial',
-    description: 'Diseño e implementación de arquitecturas convergentes IT/OT, garantizando interoperabilidad, seguridad y escalabilidad. Integración de redes industriales, sistemas SCADA y plataformas empresariales para una operación conectada, eficiente y orientada a datos.',
-    tags: ['IT/OT', 'Redes Industriales', 'Ciberseguridad', 'SCADA', 'Infraestructura Crítica'],
+    title: 'Arquitectura IT/OT Escalable',
+    client: 'Planta Industrial',
+    description:
+      'Diseño de infraestructura convergente IT/OT con redes industriales seguras y escalables, integrando sistemas productivos con plataformas empresariales.',
+    result: '↑ escalabilidad | ↑ seguridad | ↓ cuellos de botella',
+    tags: ['IT/OT', 'Redes', 'Ciberseguridad'],
     icon: Server,
   },
   {
-    title: 'Programa de Transformación Digital Industrial',
+    title: 'Transformación Digital End-to-End',
     client: 'Empresas Multisector',
-    description: 'Ejecución de estrategias integrales de transformación digital, alineando tecnología, procesos y negocio. Implementación de soluciones de automatización, analítica avanzada e integración de sistemas para maximizar eficiencia operativa y competitividad.',
-    tags: ['Transformación Digital', 'Automatización', 'Data Analytics', 'Industria 4.0', 'Consultoría Estratégica'],
+    description:
+      'Estrategia integral de digitalización combinando automatización, analítica avanzada e integración de sistemas para maximizar competitividad.',
+    result: '↑ productividad | ↓ costos operativos',
+    tags: ['Transformación Digital', 'Automatización', 'Data'],
     icon: Building2,
   },
   {
-    title: 'Automatización de Procesos Industriales',
-    client: 'Plantas Productivas',
-    description: 'Implementación de soluciones de automatización avanzada para optimizar procesos productivos, reducir intervención manual y minimizar errores operativos, incrementando la eficiencia y la confiabilidad del sistema.',
-    tags: ['Automatización', 'PLC', 'Optimización', 'Industria 4.0', 'Eficiencia Operativa'],
+    title: 'Automatización de Procesos Productivos',
+    client: 'Plantas Industriales',
+    description:
+      'Automatización avanzada con PLC y sistemas inteligentes para eliminar tareas manuales y mejorar la confiabilidad operativa.',
+    result: '↓ errores humanos | ↑ eficiencia continua',
+    tags: ['PLC', 'Automatización', 'Optimización'],
     icon: Settings,
   },
   {
-    title: 'Plataforma de Integración y Orquestación de Datos',
+    title: 'Integración y Orquestación de Datos',
     client: 'Ecosistemas Industriales',
-    description: 'Diseño de arquitectura para integración y orquestación de datos entre sistemas industriales y empresariales, habilitando analítica avanzada, trazabilidad completa y decisiones estratégicas en tiempo real.',
-    tags: ['Integración de Datos', 'ETL', 'APIs', 'Big Data', 'IT/OT'],
+    description:
+      'Arquitectura de integración de datos entre sistemas industriales y empresariales para decisiones estratégicas en tiempo real.',
+    result: '↑ trazabilidad | ↑ decisiones en tiempo real',
+    tags: ['ETL', 'APIs', 'Big Data'],
     icon: Database,
   },
   {
-    title: 'Agentes Inteligentes e IA Aplicada a la Industria',
+    title: 'IA Aplicada a Procesos Industriales',
     client: 'Industria 4.0',
-    description: 'Desarrollo e implementación de agentes inteligentes e inteligencia artificial para análisis predictivo, detección de anomalías y automatización de decisiones operativas. Integración con sistemas industriales para optimizar procesos, anticipar fallas y potenciar la eficiencia en tiempo real.',
-    tags: ['Agentes IA', 'Inteligencia Artificial', 'Predictivo', 'Automatización Inteligente', 'Industria 4.0'],
+    description:
+      'Desarrollo de agentes inteligentes para análisis predictivo, detección de anomalías y automatización de decisiones operativas.',
+    result: '↓ fallas | ↑ anticipación | ↑ eficiencia',
+    tags: ['IA', 'Predictivo', 'Automatización'],
     icon: Bot,
   },
 ]
-
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -60,18 +71,18 @@ const containerVariants = {
 }
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5 },
+    transition: { duration: 0.6 },
   },
 }
 
 export function ProjectsSection() {
   return (
     <section id="proyectos" className="py-24 relative">
-      <div className="container">
+      <div className="container max-w-6xl mx-auto px-4">
         {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -81,16 +92,15 @@ export function ProjectsSection() {
           className="text-center"
         >
           <span className="text-sm font-medium text-primary tracking-widest uppercase">
-            Portfolio
+            Casos reales
           </span>
 
           <h2 className="mt-2 font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Casos de Éxito
+            Resultados que generan impacto
           </h2>
 
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Proyectos estratégicos que reflejan nuestra capacidad para transformar
-            operaciones industriales mediante tecnología, datos e inteligencia.
+            Proyectos diseñados para optimizar procesos, reducir costos y escalar operaciones mediante tecnología, automatización e inteligencia artificial.
           </p>
         </motion.div>
 
@@ -108,14 +118,14 @@ export function ProjectsSection() {
               variants={itemVariants}
               className="group relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-2xl hover:shadow-primary/10"
             >
-              {/* Glow effect */}
+              {/* Glow */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
 
-              {/* Top bar animada */}
+              {/* Top bar */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-secondary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
 
               {/* ICON */}
-              <div className="relative mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 text-primary group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300 shadow-sm">
+              <div className="relative mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-secondary/10 text-primary group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300">
                 <project.icon className="h-6 w-6" />
               </div>
 
@@ -134,6 +144,11 @@ export function ProjectsSection() {
                 {project.description}
               </p>
 
+              {/* RESULT (🔥 clave de venta) */}
+              <div className="mt-4 text-sm font-semibold text-primary">
+                {project.result}
+              </div>
+
               {/* TAGS */}
               <div className="mt-5 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
@@ -146,9 +161,9 @@ export function ProjectsSection() {
                 ))}
               </div>
 
-              {/* CTA sutil */}
+              {/* CTA */}
               <div className="mt-6 text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition">
-                Ver más →
+                Ver caso completo →
               </div>
             </motion.div>
           ))}
