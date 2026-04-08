@@ -37,7 +37,7 @@ export function HeroSection() {
             className="h-20 md:h-24 lg:h-28 w-auto mb-6"
           />
 
-          {/* HEADLINE (🔥 clave total) */}
+          {/* Headline */}
           <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight leading-tight max-w-4xl">
             <span className="block">
               Transformá tu empresa con
@@ -47,15 +47,14 @@ export function HeroSection() {
             </span>
           </h1>
 
-          {/* SUBHEAD */}
+          {/* Subhead */}
           <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-2xl">
             Ayudamos a empresas a reducir costos, eliminar tareas manuales y escalar
-            operaciones mediante inteligencia artificial, automatización y desarrollo de software profecional personalizado.
+            operaciones mediante inteligencia artificial, automatización y desarrollo de software profesional personalizado.
           </p>
 
-          {/* PROOF / STACK (más limpio y premium) */}
+          {/* Features */}
           <div className="mt-8 grid gap-3 text-sm text-muted-foreground max-w-xl">
-
             <div className="flex items-center gap-2 justify-center">
               <span className="text-primary">✔</span>
               <span>Automatización de procesos con IA + agentes inteligentes</span>
@@ -75,36 +74,36 @@ export function HeroSection() {
               <span className="text-primary">✔</span>
               <span>SCADA, PLCs y soluciones para entornos productivos</span>
             </div>
+          </div>
 
-            {/* CTA */}
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="text-base px-8 py-6 shadow-lg hover:shadow-primary/30"
-                asChild
-              >
-                <a href="#contacto">
-                  🚀 Diagnóstico gratuito
-                </a>
-              </Button>
+          {/* CTA (fuera del grid ✔️) */}
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="text-base px-8 py-6 shadow-lg hover:shadow-primary/30"
+              asChild
+            >
+              <a href="#contacto">
+                🚀 Diagnóstico gratuito
+              </a>
+            </Button>
 
-              <Button
-                variant="outline"
-                size="lg"
-                className="w-full text-base px-8 py-6 border-primary/30 hover:bg-primary/10"
-                asChild
-              >
-                <a href="#proyectos">
-                  Ver proyectos
-                </a>
-              </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full sm:w-auto text-base px-8 py-6 border-primary/30 hover:bg-primary/10"
+              asChild
+            >
+              <a href="#proyectos">
+                Ver proyectos
+              </a>
+            </Button>
+          </div>
 
-            </div>
-
-            {/* MICRO TRUST */}
-            <p className="mt-6 text-xs text-muted-foreground">
-              Resultados medibles • Automatización real • Escalabilidad garantizada • Monitoreo Realtime
-            </p>
+          {/* Micro trust */}
+          <p className="mt-6 text-xs text-muted-foreground">
+            Resultados medibles • Automatización real • Escalabilidad garantizada • Monitoreo Realtime
+          </p>
 
         </motion.div>
       </div>
