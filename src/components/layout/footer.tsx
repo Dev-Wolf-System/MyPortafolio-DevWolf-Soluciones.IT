@@ -138,7 +138,7 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5" />
                 <span className="text-sm text-muted-foreground">
-                  Argentina
+                  Aguilares - Tucumán - Argentina
                 </span>
               </li>
 

@@ -72,7 +72,7 @@ export function HeroSection() {
 
             <div className="flex items-center gap-2 justify-center">
               <span className="text-primary">✔</span>
-              <span>SCADA, PLCs y soluciones para entornos productivos</span>
+              <span>SCADA, PLCs y Soluciones Industriales</span>
             </div>
           </div>
 
