@@ -62,8 +62,13 @@ export const metadata: Metadata = {
     follow: true,
   },
 
+  // ✅ AQUÍ VA BIEN
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
 }
 
