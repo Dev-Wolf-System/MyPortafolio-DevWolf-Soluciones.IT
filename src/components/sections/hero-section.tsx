@@ -21,12 +21,12 @@ export function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           className="flex flex-col items-center"
         >
 
           {/* Badge */}
-          <span className="mb-6 inline-block rounded-full border border-primary/30 px-4 py-1 text-sm text-primary">
+          <span className="mb-6 inline-block rounded-full border border-primary/30 px-4 py-1 text-xs md:text-sm text-primary backdrop-blur-sm bg-primary/5">
             Automatización · IA · Sistemas a medida
           </span>
 
@@ -38,66 +38,73 @@ export function HeroSection() {
           />
 
           {/* HEADLINE (🔥 clave total) */}
-          <h1 className="font-heading text-3xl font-bold tracking-tight sm:text-4xl md:text-6xl leading-tight max-w-4xl">
-            <span className="text-foreground">
-              Reducí costos operativos y automatizá tu empresa
+          <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight leading-tight max-w-4xl">
+            <span className="block">
+              Transformá tu empresa con
             </span>
-            <br />
-            <span className="text-primary">
-              con IA y sistemas diseñados a medida
+            <span className="text-gradient block mt-2">
+              automatización inteligente y sistemas a medida
             </span>
           </h1>
 
-          {/* SUBHEAD (más concreto) */}
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto md:text-xl">
-            Implemento automatización, inteligencia artificial y software
-            personalizado para empresas que buscan escalar sin aumentar estructura.
+          {/* SUBHEAD */}
+          <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-2xl">
+            Ayudamos a empresas a reducir costos, eliminar tareas manuales y escalar
+            operaciones mediante inteligencia artificial, automatización y desarrollo de software profecional personalizado.
           </p>
 
-          {/* PROOF / STACK */}
-          <div className="mt-6 flex flex-col items-center gap-2 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <span className="text-primary">✔</span>
-              <span>Automatización con n8n + IA + agentes inteligentes</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-primary">✔</span>
-              <span>Sistemas a medida (React, Node.js, PostgreSQL)</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-primary">✔</span>
-              <span>Integraciones con WhatsApp, APIs y entornos industriales</span>
-            </div>
-          </div>
+          {/* PROOF / STACK (más limpio y premium) */}
+          <div className="mt-8 grid gap-3 text-sm text-muted-foreground max-w-xl">
 
-          {/* CTA */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="text-base px-8 py-6 shadow-lg hover:shadow-primary/30"
-              asChild
-            >
-              <a href="#contacto">
-                🚀 Agendar diagnóstico gratuito
-              </a>
-            </Button>
+            <div className="flex items-center gap-2 justify-center">
+              <span className="text-primary">✔</span>
+              <span>Automatización de procesos con IA + agentes inteligentes</span>
+            </div>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="text-base px-8 py-6"
-              asChild
-            >
-              <a href="#proyectos">
-                Ver casos reales
-              </a>
-            </Button>
-          </div>
+            <div className="flex items-center gap-2 justify-center">
+              <span className="text-primary">✔</span>
+              <span>Integraciones con APIs, WhatsApp y sistemas industriales</span>
+            </div>
 
-          {/* MICRO TRUST */}
-          <p className="mt-6 text-xs text-muted-foreground">
-            Enfoque en resultados medibles • Sin soluciones genéricas
-          </p>
+            <div className="flex items-center gap-2 justify-center">
+              <span className="text-primary">✔</span>
+              <span>Desarrollo de sistemas a medida (CRM, ERP, SaaS)</span>
+            </div>
+
+            <div className="flex items-center gap-2 justify-center">
+              <span className="text-primary">✔</span>
+              <span>SCADA, PLCs y soluciones para entornos productivos</span>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="text-base px-8 py-6 shadow-lg hover:shadow-primary/30"
+                asChild
+              >
+                <a href="#contacto">
+                  🚀 Diagnóstico gratuito
+                </a>
+              </Button>
+
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full text-base px-8 py-6 border-primary/30 hover:bg-primary/10"
+                asChild
+              >
+                <a href="#proyectos">
+                  Ver proyectos
+                </a>
+              </Button>
+
+            </div>
+
+            {/* MICRO TRUST */}
+            <p className="mt-6 text-xs text-muted-foreground">
+              Resultados medibles • Automatización real • Escalabilidad garantizada • Monitoreo Realtime
+            </p>
 
         </motion.div>
       </div>

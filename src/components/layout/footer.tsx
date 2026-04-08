@@ -1,4 +1,7 @@
-import { Linkedin, Mail, MapPin, Phone } from 'lucide-react'
+'use client'
+
+import { motion } from 'framer-motion'
+import { Linkedin, Mail, MapPin } from 'lucide-react'
 
 const socialLinks = [
   {
@@ -22,97 +25,140 @@ const services = [
   'Domótica e IoT',
   'Infraestructura IT/OT',
   'SaaS y Microservicios',
-  'Soporte tecnico especializado',
-  'Consultorias personalizadas'
+  'Soporte técnico especializado',
+  'Consultorías personalizadas',
 ]
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-card">
-      <div className="container py-12">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="relative border-t border-border overflow-hidden">
+      {/* Fondo PRO */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-card to-background" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-primary/10 blur-3xl opacity-20" />
+
+      <div className="container relative z-10 py-16">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
           {/* Brand */}
-          <div className="space-y-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="space-y-5"
+          >
             <img
               src="/images/logo-wide.png"
               alt="DevWolf Soluciones IT"
               className="h-10 w-auto"
             />
-            <p className="text-sm text-muted-foreground">
-              Impulsamos la transformación de su empresa mediante soluciones tecnológicas de vanguardia, acompañándolo estratégicamente en cada etapa del camino hacia la Industria 4.0.
 
-              Integramos innovación, automatización e inteligencia de datos para optimizar procesos, aumentar la eficiencia operativa y potenciar su competitividad en un entorno cada vez más digital. 🚀.
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Impulsamos la transformación digital mediante automatización,
+              inteligencia artificial y software a medida, ayudando a empresas a
+              escalar, optimizar costos y ganar competitividad en la era digital.
             </p>
-            <div className="flex gap-4">
+
+            <div className="flex gap-3">
               {socialLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-muted text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                  className="group inline-flex h-10 w-10 items-center justify-center rounded-xl bg-muted/50 backdrop-blur transition-all hover:bg-primary hover:scale-110"
                 >
-                  <link.icon className="h-5 w-5" />
+                  <link.icon className="h-5 w-5 text-muted-foreground group-hover:text-white transition-colors" />
                   <span className="sr-only">{link.label}</span>
                 </a>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="font-heading font-semibold mb-4">Enlaces Rápidos</h3>
-            <ul className="space-y-2">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 className="font-heading font-semibold mb-4 text-lg">
+              Enlaces
+            </h3>
+
+            <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Services */}
-          <div>
-            <h3 className="font-heading font-semibold mb-4">Servicios</h3>
-            <ul className="space-y-2">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <h3 className="font-heading font-semibold mb-4 text-lg">
+              Servicios
+            </h3>
+
+            <ul className="space-y-3">
               {services.map((service) => (
-                <li key={service}>
-                  <span className="text-sm text-muted-foreground">{service}</span>
+                <li
+                  key={service}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {service}
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact */}
-          <div>
-            <h3 className="font-heading font-semibold mb-4">Contacto</h3>
-            <ul className="space-y-3">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h3 className="font-heading font-semibold mb-4 text-lg">
+              Contacto
+            </h3>
+
+            <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5" />
-                <span className="text-sm text-muted-foreground">Argentina</span>
+                <span className="text-sm text-muted-foreground">
+                  Argentina
+                </span>
               </li>
+
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary" />
                 <a
-                  href="mailto:contacto@devwolf.com.ar"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  href="mailto:devwolf.contacto@gmail.com"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
                   devwolf.contacto@gmail.com
                 </a>
               </li>
             </ul>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-border text-center">
+        {/* Divider */}
+        <div className="mt-14 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} DevWolf Soluciones IT. Todos los derechos reservados.
+            © {new Date().getFullYear()} DevWolf Soluciones IT — Todos los derechos reservados.
           </p>
         </div>
       </div>

@@ -4,35 +4,42 @@
 
 @layer base {
   :root {
-    /* Paleta DevWolf Soluciones IT */
+    /* === BASE === */
     --background: 0 0% 4%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 7%;
+
+    --card: 0 0% 6%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 7%;
+
+    --popover: 0 0% 6%;
     --popover-foreground: 0 0% 98%;
 
-    /* Azul corporativo DevWolf #004aad */
-    --primary: 214 100% 34%;
+    /* === BRAND (DevWolf) === */
+
+    /* Azul principal (más elegante) */
+    --primary: 214 100% 38%;
     --primary-foreground: 0 0% 100%;
 
-    /* Rojo DevWolf #ff0000 - para acentos y CTAs */
-    --secondary: 0 100% 50%;
+    /* Rojo suavizado (menos agresivo visualmente) */
+    --secondary: 0 85% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 60%;
-
-    /* Azul claro para elementos secundarios */
-    --accent: 214 100% 50%;
+    /* Azul brillante para efectos */
+    --accent: 214 100% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62% 30%;
+    /* === UI === */
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+
+    --destructive: 0 62% 35%;
     --destructive-foreground: 0 0% 98%;
+
     --border: 0 0% 12%;
     --input: 0 0% 12%;
-    --ring: 214 100% 34%;
-    --radius: 0.75rem;
+    --ring: 214 100% 38%;
+
+    --radius: 0.9rem;
   }
 
   * {
@@ -48,7 +55,7 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  /* Custom scrollbar */
+  /* === SCROLLBAR PRO === */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -59,24 +66,64 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-muted-foreground/20 rounded-full;
+    background: linear-gradient(to bottom,
+        hsl(var(--primary)),
+        hsl(var(--secondary)));
+    border-radius: 9999px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-muted-foreground/40;
+    opacity: 0.8;
   }
 }
 
 @layer utilities {
+
+  /* === TEXT GRADIENT PRO === */
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-secondary;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg,
+        hsl(var(--primary)),
+        hsl(var(--accent)),
+        hsl(var(--secondary)));
   }
 
+  /* === GLOW EFFECTS === */
+  .glow-primary {
+    box-shadow: 0 0 40px hsl(var(--primary) / 0.3);
+  }
+
+  .glow-secondary {
+    box-shadow: 0 0 40px hsl(var(--secondary) / 0.3);
+  }
+
+  /* === GRADIENTS === */
   .bg-gradient-radial {
-    background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+    background: radial-gradient(circle at center, var(--tw-gradient-stops));
   }
 
   .bg-gradient-conic {
     background: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+  }
+
+  /* === GLASS EFFECT (muy clave) === */
+  .glass {
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border));
+  }
+
+  /* === NOISE OVERLAY (pro nivel SaaS) === */
+  .noise {
+    position: relative;
+  }
+
+  .noise::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.04;
+    pointer-events: none;
   }
 }

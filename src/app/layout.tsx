@@ -15,26 +15,55 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'DevWolf Soluciones IT | Transformación Digital e Industria 4.0',
-  description: 'Empresa especializada en transformación digital, automatización con IA, desarrollo de software, domótica, infraestructura IT/OT, soluciones SaaS y Soporte tecnico especializado. Implementación de tecnologías para Industria 4.0.',
-  keywords: ['transformación digital', 'industria 4.0', 'automatización', 'IA', 'desarrollo de software', 'SCADA', 'IoT', 'DevWolf', 'soporte'],
-  authors: [{ name: 'DevWolf Soluciones IT' }],
-  openGraph: {  
-    title: 'DevWolf Soluciones IT | Transformación Digital e Industria 4.0',
-    description: 'Empresa especializada en transformación digital, automatización con IA, desarrollo de software, domótica, infraestructura IT/OT y soluciones SaaS.',
-    url: 'https://devwolf.srv878399.hstgr.cloud/',
-    siteName: 'DevWolf Soluciones IT',
-    type: 'website',
-    locale: 'es_AR',
+  metadataBase: new URL('https://devwolf.srv878399.hstgr.cloud'),
+
+  title: {
+    default: 'DevWolf Soluciones IT | Automatización, IA e Industria 4.0',
+    template: '%s | DevWolf IT',
   },
+
+  description:
+    'Automatizamos procesos, reducimos costos y escalamos negocios mediante IA, automatización y software a medida. Especialistas en Industria 4.0.',
+
+  keywords: [
+    'automatización',
+    'IA',
+    'industria 4.0',
+    'software a medida',
+    'n8n',
+    'SCADA',
+    'IoT',
+    'DevWolf',
+    'automatizar negocios',
+  ],
+
+  authors: [{ name: 'DevWolf Soluciones IT' }],
+  creator: 'DevWolf Soluciones IT',
+
+  openGraph: {
+    title: 'DevWolf Soluciones IT | Automatización e IA',
+    description:
+      'Transformamos empresas mediante automatización, inteligencia artificial y desarrollo de software.',
+    url: '/',
+    siteName: 'DevWolf Soluciones IT',
+    locale: 'es_AR',
+    type: 'website',
+  },
+
   twitter: {
     card: 'summary_large_image',
     title: 'DevWolf Soluciones IT',
-    description: 'Transformación Digital e Industria 4.0',
+    description:
+      'Automatización, IA y software a medida para escalar tu negocio.',
   },
+
   robots: {
     index: true,
     follow: true,
+  },
+
+  icons: {
+    icon: '/favicon.ico',
   },
 }
 
@@ -44,8 +73,24 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <body className="min-h-screen bg-background font-sans">
+    <html
+      lang="es"
+      className={`${inter.variable} ${spaceGrotesk.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-screen bg-background font-sans antialiased">
+
+        {/* === BACKGROUND GLOBAL PRO === */}
+        <div className="fixed inset-0 -z-10 noise">
+          <div className="absolute inset-0 bg-background" />
+
+          {/* Glow superior */}
+          <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-primary/10 blur-3xl opacity-30" />
+
+          {/* Glow inferior */}
+          <div className="absolute bottom-[-200px] right-1/2 translate-x-1/2 w-[900px] h-[900px] bg-secondary/10 blur-3xl opacity-30" />
+        </div>
+
         {children}
       </body>
     </html>
