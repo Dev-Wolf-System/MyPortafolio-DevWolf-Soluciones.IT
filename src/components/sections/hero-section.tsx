@@ -17,7 +17,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container max-w-6xl mx-auto text-center px-4">
+      <div className="relative z-10 container max-w-6xl mx-auto text-center px-4 pt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -77,10 +77,10 @@ export function HeroSection() {
           </div>
 
           {/* CTA (fuera del grid ✔️) */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="text-base px-8 py-6 shadow-lg hover:shadow-primary/30"
+              className="text-base px-8 py-4 shadow-lg hover:shadow-primary/30"
               asChild
             >
               <a href="#contacto">
@@ -91,7 +91,7 @@ export function HeroSection() {
             <Button
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto text-base px-8 py-6 border-primary/30 hover:bg-primary/10"
+              className="w-full sm:w-auto text-base px-8 py-4 border-primary/30 hover:bg-primary/10"
               asChild
             >
               <a href="#proyectos">
@@ -113,7 +113,7 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

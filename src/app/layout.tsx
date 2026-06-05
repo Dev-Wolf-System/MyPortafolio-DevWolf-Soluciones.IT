@@ -15,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://devwolf.srv878399.hstgr.cloud'),
+  metadataBase: new URL('https://devwolf.com.ar'),
 
   title: {
     default: 'DevWolf Soluciones IT | Automatización, IA e Industria 4.0',
