@@ -22,11 +22,9 @@ const services = [
   'Transformación Digital',
   'Automatización con IA',
   'Desarrollo de Software',
-  'Domótica e IoT',
   'Infraestructura IT/OT',
   'SaaS y Microservicios',
-  'Soporte técnico especializado',
-  'Consultorías personalizadas',
+  'Domótica e IoT',
 ]
 
 export function Footer() {
@@ -36,8 +34,8 @@ export function Footer() {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-card to-background" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-primary/10 blur-3xl opacity-20" />
 
-      <div className="container relative z-10 py-16">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="container relative z-10 py-8">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
           {/* Brand */}
           <motion.div
@@ -45,7 +43,7 @@ export function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="space-y-5"
+            className="space-y-3"
           >
             <img
               src="/images/logo-wide.png"
@@ -54,9 +52,7 @@ export function Footer() {
             />
 
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Impulsamos la transformación digital mediante automatización,
-              inteligencia artificial y software a medida, ayudando a empresas a
-              escalar, optimizar costos y ganar competitividad en la era digital.
+              Transformación digital e Industria 4.0 para empresas que quieren escalar.
             </p>
 
             <div className="flex gap-3">
@@ -82,16 +78,16 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="font-heading font-semibold mb-4 text-lg">
+            <h3 className="font-heading font-semibold mb-3 text-sm font-medium uppercase tracking-wider opacity-60">
               Enlaces
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-xs text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </a>
@@ -107,15 +103,15 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <h3 className="font-heading font-semibold mb-4 text-lg">
+            <h3 className="font-heading font-semibold mb-3 text-sm font-medium uppercase tracking-wider opacity-60">
               Servicios
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {services.map((service) => (
                 <li
                   key={service}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
                 >
                   {service}
                 </li>
@@ -130,14 +126,14 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="font-heading font-semibold mb-4 text-lg">
+            <h3 className="font-heading font-semibold mb-3 text-sm font-medium uppercase tracking-wider opacity-60">
               Contacto
             </h3>
 
-            <ul className="space-y-4">
+            <ul className="space-y-2.5">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5" />
-                <span className="text-sm text-muted-foreground">
+                <span className="text-xs text-muted-foreground">
                   Aguilares - Tucumán - Argentina
                 </span>
               </li>
@@ -146,7 +142,7 @@ export function Footer() {
                 <Mail className="h-5 w-5 text-primary" />
                 <a
                   href="mailto:devwolf.contacto@gmail.com"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="text-xs text-muted-foreground hover:text-primary transition-colors"
                 >
                   devwolf.contacto@gmail.com
                 </a>
@@ -156,8 +152,8 @@ export function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="mt-14 pt-8 border-t border-border text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="mt-6 pt-5 border-t border-border text-center">
+          <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} DevWolf Soluciones IT — Todos los derechos reservados.
           </p>
         </div>
