@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  X, CheckCircle2, ChevronRight, ArrowUpRight,
+  X, CheckCircle2, ChevronRight,
   Zap, Target, Shield, TrendingUp, Layers, Clock, Settings, Code2,
 } from 'lucide-react'
 import Link from 'next/link'
@@ -328,15 +328,7 @@ export function ServiceModal({ service, onClose }: Props) {
                         style={{ background: 'rgba(255,255,255,0.02)' }}
                       >
                         <div className="absolute top-0 inset-x-0 h-[2px]" style={{ background: `linear-gradient(to right, ${cfg.accentHex}, transparent)` }} />
-                        <div className="flex items-start justify-between gap-2 mb-3">
-                          <p className="text-sm font-semibold text-white/90 leading-tight">{uc.title}</p>
-                          <div
-                            className="flex-shrink-0 h-7 w-7 rounded-lg flex items-center justify-center"
-                            style={{ background: `${cfg.accentHex}20` }}
-                          >
-                            <ArrowUpRight className="h-3.5 w-3.5" style={{ color: cfg.accentHex }} />
-                          </div>
-                        </div>
+                        <p className="text-sm font-semibold text-white/90 leading-tight mb-3">{uc.title}</p>
                         <p className="text-xs text-white/50 leading-relaxed">{uc.description}</p>
                         <div className="mt-3 inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold border"
                           style={{ color: '#34d399', borderColor: '#34d39930', background: '#34d39910' }}>
