@@ -161,10 +161,6 @@ export function ProjectsSection() {
                 ))}
               </div>
 
-              {/* CTA */}
-              <div className="mt-6 text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition">
-                Ver caso completo →
-              </div>
             </motion.div>
           ))}
         </motion.div>
