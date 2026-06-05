@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Search, FileCode2, Rocket, HeartHandshake } from 'lucide-react'
+import { Search, FileCode2, Rocket, HeartHandshake, CalendarCheck } from 'lucide-react'
 
 const steps = [
   {
@@ -96,7 +96,8 @@ export function ProcessSection() {
             href="#contacto"
             className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-6 py-3 text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
           >
-            🚀 Empezar con el diagnóstico gratuito →
+            <CalendarCheck className="h-4 w-4" />
+            Empezar con el diagnóstico gratuito
           </a>
         </motion.div>
       </div>

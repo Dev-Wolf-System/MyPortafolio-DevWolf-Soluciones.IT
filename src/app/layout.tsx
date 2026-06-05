@@ -19,51 +19,80 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://devwolf.com.ar'),
 
   title: {
-    default: 'DevWolf Soluciones IT | Automatización, IA e Industria 4.0',
-    template: '%s | DevWolf IT',
+    default: 'DevWolf Soluciones IT | Automatización con IA, Software a Medida e Industria 4.0 — Argentina',
+    template: '%s | DevWolf Soluciones IT',
   },
 
   description:
-    'Automatizamos procesos, reducimos costos y escalamos negocios mediante IA, automatización y software a medida. Especialistas en Industria 4.0.',
+    'Automatizamos procesos empresariales con IA, desarrollamos software a medida y modernizamos infraestructura IT/OT. Más del 70% de reducción de tareas manuales. Proyectos reales en Industria 4.0, SCADA e IoT. Argentina y Latinoamérica.',
 
   keywords: [
-    'automatización',
-    'IA',
-    'industria 4.0',
-    'software a medida',
-    'n8n',
-    'SCADA',
-    'IoT',
-    'DevWolf',
-    'automatizar negocios',
+    'automatización de procesos con IA',
+    'software a medida Argentina',
+    'industria 4.0 Argentina',
+    'transformación digital empresas',
+    'agentes inteligentes IA',
+    'desarrollo software empresarial',
+    'automatización n8n',
+    'sistemas SCADA Argentina',
+    'IoT domótica industrial',
+    'infraestructura IT OT',
+    'cloud microservicios',
+    'analítica predictiva',
+    'automatización cognitiva',
+    'DevWolf Soluciones IT',
+    'reducir costos operativos IA',
+    'integración sistemas ERP CRM',
+    'Tucumán tecnología',
+    'empresa tecnología Latinoamérica',
   ],
 
-  authors: [{ name: 'DevWolf Soluciones IT' }],
+  authors: [{ name: 'DevWolf Soluciones IT', url: 'https://devwolf.com.ar' }],
   creator: 'DevWolf Soluciones IT',
+  publisher: 'DevWolf Soluciones IT',
+  category: 'technology',
+
+  alternates: {
+    canonical: 'https://devwolf.com.ar',
+  },
 
   openGraph: {
-    title: 'DevWolf Soluciones IT | Automatización e IA',
+    title: 'DevWolf Soluciones IT — Automatización con IA y Software a Medida',
     description:
-      'Transformamos empresas mediante automatización, inteligencia artificial y desarrollo de software.',
-    url: '/',
+      '¿Tu empresa pierde tiempo en tareas manuales? Automatizamos procesos, desarrollamos software a medida e implementamos IA para que escales sin aumentar costos. +70% eficiencia garantizada.',
+    url: 'https://devwolf.com.ar',
     siteName: 'DevWolf Soluciones IT',
     locale: 'es_AR',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'DevWolf Soluciones IT — Automatización con IA e Industria 4.0',
+      },
+    ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'DevWolf Soluciones IT',
+    title: 'DevWolf Soluciones IT — Automatización con IA',
     description:
-      'Automatización, IA y software a medida para escalar tu negocio.',
+      'Automatizamos procesos, reducimos costos y escalamos negocios con IA y software a medida. Proyectos reales en Industria 4.0. Argentina.',
+    images: ['/images/og-image.png'],
   },
 
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 
-  // ✅ AQUÍ VA BIEN
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -97,6 +126,46 @@ export default function RootLayout({
           <div className="absolute bottom-[-200px] right-1/2 translate-x-1/2 w-[900px] h-[900px] bg-secondary/10 blur-3xl opacity-30" />
         </div>
 
+        {/* JSON-LD Organization schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'DevWolf Soluciones IT',
+              url: 'https://devwolf.com.ar',
+              logo: 'https://devwolf.com.ar/images/logo-wide.png',
+              description: 'Empresa especializada en automatización con IA, desarrollo de software a medida, Industria 4.0 e infraestructura IT/OT. Argentina y Latinoamérica.',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Aguilares',
+                addressRegion: 'Tucumán',
+                addressCountry: 'AR',
+              },
+              contactPoint: {
+                '@type': 'ContactPoint',
+                contactType: 'customer service',
+                email: 'devwolf.contacto@gmail.com',
+                availableLanguage: 'Spanish',
+              },
+              sameAs: [
+                'https://www.linkedin.com/in/nahuel-carlos-agustin-lobo-398230151',
+              ],
+              knowsAbout: [
+                'Automatización de procesos con IA',
+                'Industria 4.0',
+                'Sistemas SCADA',
+                'IoT',
+                'Desarrollo de software empresarial',
+                'Cloud computing',
+                'Microservicios',
+                'Agentes inteligentes',
+                'Analítica predictiva',
+              ],
+            }),
+          }}
+        />
         {children}
         <WhatsAppButton />
       </body>

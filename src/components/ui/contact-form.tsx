@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Button } from './button'
-import { Loader2, CheckCircle2 } from 'lucide-react'
+import { Loader2, CheckCircle2, Send } from 'lucide-react'
 
 const schema = z.object({
   name: z.string().min(2, 'Nombre requerido'),
@@ -154,7 +154,7 @@ export function ContactForm() {
             Enviando...
           </>
         ) : (
-          '🚀 Enviar mensaje'
+          <><Send className="mr-2 h-4 w-4" />Enviar mensaje</>
         )}
       </Button>
 

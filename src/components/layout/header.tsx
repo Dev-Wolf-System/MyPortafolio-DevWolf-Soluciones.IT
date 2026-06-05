@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, CalendarCheck } from 'lucide-react'
 
 const navItems = [
   { label: 'Servicios', href: '#servicios' },
@@ -63,10 +63,13 @@ export function Header() {
           {/* CTA PRINCIPAL */}
           <Button
             size="sm"
-            className="shadow-md hover:shadow-primary/30 transition-all"
+            className="shadow-md shadow-primary/20 hover:shadow-primary/35 transition-all font-semibold gap-1.5"
             asChild
           >
-            <a href="#contacto">🚀 Agendar llamada</a>
+            <a href="#contacto">
+              <CalendarCheck className="h-4 w-4" />
+              Agendar llamada
+            </a>
           </Button>
         </div>
 
@@ -104,8 +107,11 @@ export function Header() {
               ))}
 
               {/* CTA MOBILE */}
-              <Button className="w-full mt-2" asChild>
-                <a href="#contacto">🚀 Agendar llamada</a>
+              <Button className="w-full mt-2 gap-2 font-semibold" asChild>
+                <a href="#contacto">
+                  <CalendarCheck className="h-4 w-4" />
+                  Agendar llamada
+                </a>
               </Button>
 
             </div>

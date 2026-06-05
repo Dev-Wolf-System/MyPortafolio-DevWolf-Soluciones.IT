@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { CalendarCheck, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export function HeroSection() {
@@ -81,8 +82,9 @@ export function HeroSection() {
               className="text-base px-8 py-4 shadow-lg hover:shadow-primary/30"
               asChild
             >
-              <a href="#contacto">
-                🚀 Diagnóstico gratuito
+              <a href="#contacto" className="flex items-center gap-2">
+                <CalendarCheck className="h-5 w-5" />
+                Diagnóstico gratuito
               </a>
             </Button>
 
@@ -92,8 +94,9 @@ export function HeroSection() {
               className="w-full sm:w-auto text-base px-8 py-4 border-primary/30 hover:bg-primary/10"
               asChild
             >
-              <a href="#proyectos">
+              <a href="#proyectos" className="flex items-center gap-2">
                 Ver proyectos
+                <ArrowRight className="h-5 w-5" />
               </a>
             </Button>
           </div>
