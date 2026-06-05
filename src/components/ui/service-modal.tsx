@@ -6,7 +6,6 @@ import {
   X, CheckCircle2, ChevronRight,
   Zap, Target, Shield, TrendingUp, Layers, Clock, Settings, Code2,
 } from 'lucide-react'
-import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import type { ServiceData } from '@/data/services'
@@ -384,16 +383,6 @@ export function ServiceModal({ service, onClose }: Props) {
                             Agendar diagnóstico
                             <ChevronRight className="ml-1 h-4 w-4" />
                           </a>
-                        </Button>
-                        <Button
-                          variant="outline"
-                          size="lg"
-                          className="border-white/10 text-white/70 hover:text-white hover:bg-white/5"
-                          asChild
-                        >
-                          <Link href={`/servicios/${service.slug}`} onClick={onClose}>
-                            Ver página completa
-                          </Link>
                         </Button>
                       </div>
                     </div>
