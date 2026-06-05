@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { z } from 'zod'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 const contactSchema = z.object({
   name: z.string().min(2, 'Nombre requerido'),
   company: z.string().optional(),
@@ -18,6 +16,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const data = contactSchema.parse(body)
 
+    const resend = new Resend(process.env.RESEND_API_KEY)
     await resend.emails.send({
       from: 'DevWolf Contacto <onboarding@resend.dev>',
       to: ['devwolf.contacto@gmail.com'],
