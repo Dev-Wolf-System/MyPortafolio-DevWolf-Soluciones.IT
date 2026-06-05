@@ -7,13 +7,11 @@ export function HeroSection() {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
 
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-background" />
-
-      {/* Glow effects */}
+      {/* Mesh gradient background animado */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-radial from-primary/20 to-transparent blur-3xl" />
-        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-radial from-secondary/20 to-transparent blur-3xl" />
+        <div className="mesh-blob-1 absolute -top-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-primary/15 blur-3xl" />
+        <div className="mesh-blob-2 absolute -bottom-1/4 -right-1/4 w-[600px] h-[600px] rounded-full bg-secondary/10 blur-3xl" />
+        <div className="mesh-blob-3 absolute top-1/3 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full bg-accent/10 blur-3xl" />
       </div>
 
       {/* Content */}
